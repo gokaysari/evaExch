@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "gokaysari",
+    "password": "null",
+    "database": "evaexchange",
+    "host": "127.0.0.1",
+    "port": 5433,
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "gokaysari",
+    "password": "null",
+    "database": "evaexchange_test",
+    "host": "127.0.0.1",
+    "port": 5433,
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "gokaysari",
+    "password": "null",
+    "database": "evaexchange_production",
+    "host": "YOUR_PRODUCTION_DB_HOST",
+    "port": 5433,
+    "dialect": "postgres"
+  }
+}
