@@ -1,34 +1,64 @@
-/evaExchange
-|-- /node_modules
-|-- /models
-|   |-- user.js
-|   |-- share.js
-|   |-- portfolio.js
-|   |-- transaction.js
-|   |-- index.js
-|-- /migrations
-|   |-- 20231003120646-create-shares
-|   |-- 20231003120657-create-users
-|   |-- 20231003120703-create-portfolios
-|   |-- 20231003120710-create-transactions
-|-- /seeders
-|-- /config
-|   |-- config.json
-|-- package.json
-|-- server.js
-|-- README.md 
+# EvaExchange Backend API
+
+EvaExchange provides a platform for users to trade shares. This repository contains the backend RESTful API that powers the EvaExchange platform. The API supports user registration, login, share management, trading operations, and more.
+
+# Features
+
+# User Registration and Login
+Secure user registration and login using bcrypt for password hashing.
+Generation of JWT (JSON Web Token) for authenticated routes.
+
+# Shares Management
+Register new shares with symbol and price.
+Update the price of existing shares.
+Fetch all available shares.
+
+# Portfolio Management
+View a user's portfolio, including shares owned.
+
+# Trading Operations
+Buy shares.
+Sell shares.
+
+# Transaction History
+View a user's transaction history.
+
+# Middleware for JWT Authentication
+Protects certain routes to ensure they can only be accessed with a valid JWT.
+
+# Error Handling
+Provides meaningful error messages for various scenarios.
+
+# Database Models and Associations
+Uses Sequelize as an ORM.
+Models include Users, Shares, Portfolios, and Transactions with established associations.
 
 
 
-# Setup
+# Prerequisites
+Node.js
+npm
+PostgreSQL
 
-Clone the repository:
-git clone [repository-url]
-cd EvaExchange
+
+# clone
+git clone https://github.com/gokaysari/evaExch.git
+
+
+# open the directory
+cd evaExch
 
 
 # Install dependencies:
 npm install
+
+
+# Set up your .env file from dotenv-example
+
+
+Clone the repository:
+git clone [repository-url]
+cd EvaExchange
 
 
 # Set up the database:
@@ -54,6 +84,7 @@ userId: ID of the user.
 shareSymbol: Symbol of the share.
 quantity: Number of shares to buy.
 
+
 # Trade (SELL)
 
 URL: /trade/sell
@@ -68,5 +99,5 @@ quantity: Number of shares to sell.
 You can test the API using Postman. A Postman collection is provided for easy testing of all endpoints.
 
 
-# Contributing
-If you'd like to contribute, please fork the repository and make changes as you'd like. Pull requests are warmly welcome.
+
+
