@@ -1,81 +1,91 @@
 # EvaExchange Backend API
 
 EvaExchange provides a platform for users to trade shares. This repository contains the backend RESTful API that powers the EvaExchange platform. The API supports user registration, login, share management, trading operations, and more.
-
-# Features
-
-# User Registration and Login
+## Features
+- User Registration and Login
 Secure user registration and login using bcrypt for password hashing.
 Generation of JWT (JSON Web Token) for authenticated routes.
 
-# Shares Management
+- Shares Management
 Register new shares with symbol and price.
 Update the price of existing shares.
 Fetch all available shares.
 
-# Portfolio Management
+- Portfolio Management
 View a user's portfolio, including shares owned.
 
-# Trading Operations
+- Trading Operations
 Buy shares.
 Sell shares.
 
-# Transaction History
+- Transaction History
 View a user's transaction history.
 
-# Middleware for JWT Authentication
+- Middleware for JWT Authentication
 Protects certain routes to ensure they can only be accessed with a valid JWT.
 
-# Error Handling
+- Error Handling
 Provides meaningful error messages for various scenarios.
 
-# Database Models and Associations
+- Database Models and Associations
 Uses Sequelize as an ORM.
 Models include Users, Shares, Portfolios, and Transactions with established associations.
 
 
+  
+## Prerequisites
 
-# Prerequisites
 Node.js
 npm
 PostgreSQL
 
 
-# clone
-git clone https://github.com/gokaysari/evaExch.git
+  
+## Bilgisayarınızda Çalıştırın
+
+clone
+
+```bash
+  git clone https://github.com/gokaysari/evaExch.git
+```
+
+open the directory
+
+```bash
+  cd evaExch
+```
+
+Install dependencies:
+
+```bash
+  npm install
+```
+
+Set up your .env file from dotenv-example
 
 
-# open the directory
-cd evaExch
-
-
-# Install dependencies:
-npm install
-
-
-# Set up your .env file from dotenv-example
-
-
-Clone the repository:
-git clone [repository-url]
-cd EvaExchange
-
-
-# Set up the database:
+Set up the database:
 Ensure you have PostgreSQL set up and running.
 Update the config/config.json file with your database credentials.
 
+```bash
+  npm run start
+```
 
-# Run migrations to set up the database tables:
-npx sequelize-cli db:migrate
+  
+Run migrations to set up the database tables:
+```bash
+  npx sequelize-cli db:migrate
+```
+
+Start the server
+```bash
+  npm start
+```
 
 
-# Start the server:
-npm start
-
-
-# API Endpoints
-# Trade (BUY)
+## API Endpoints
+## Trade (BUY)
 
 URL: /trade/buy
 Method: POST
@@ -85,7 +95,7 @@ shareSymbol: Symbol of the share.
 quantity: Number of shares to buy.
 
 
-# Trade (SELL)
+## Trade (SELL)
 
 URL: /trade/sell
 Method: POST
@@ -95,7 +105,7 @@ shareSymbol: Symbol of the share.
 quantity: Number of shares to sell.
 
 
-# Testing
+## Testing
 You can test the API using Postman. A Postman collection is provided for easy testing of all endpoints.
 
 
